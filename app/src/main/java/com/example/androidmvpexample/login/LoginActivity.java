@@ -14,6 +14,7 @@ import com.example.androidmvpexample.model.LoginModel;
 import com.example.androidmvpexample.repository.LoginRepository;
 import com.example.androidmvpexample.repository.LoginRepositoryImpl;
 
+
 public class LoginActivity extends AppCompatActivity implements LoginActivityMVP.View {
     private LoginActivityMVP.Presenter presenter;
     private LoginActivityMVP.Model model;
@@ -27,6 +28,7 @@ public class LoginActivity extends AppCompatActivity implements LoginActivityMVP
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        repository = new LoginRepositoryImpl();
         model = new LoginModel(repository);
         presenter = new LoginActivityPresenter(model);
 
