@@ -1,5 +1,11 @@
 package com.example.androidmvpexample.model;
 
+/**
+ * Class holds some user properties.
+ *
+ */
+
+
 public class User {
     private int id;
     private String firstName;
