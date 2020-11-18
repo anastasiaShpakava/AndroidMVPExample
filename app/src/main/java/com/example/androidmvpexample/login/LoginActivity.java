@@ -10,6 +10,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.androidmvpexample.R;
+import com.example.androidmvpexample.dagger.App;
 import com.example.androidmvpexample.model.LoginModel;
 import com.example.androidmvpexample.repository.LoginRepository;
 import com.example.androidmvpexample.repository.LoginRepositoryImpl;
@@ -28,9 +29,9 @@ public class LoginActivity extends AppCompatActivity implements LoginActivityMVP
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        repository = new LoginRepositoryImpl();
-        model = new LoginModel(repository);
-        presenter = new LoginActivityPresenter(model);
+        repository = App.getComponent().getLoginRepository();
+        model = App.getComponent().getLoginModel();
+        presenter = App.getComponent().getLoginActivityPresenter();
 
         firstName = findViewById(R.id.loginActivity_firstName_editText);
         lastName = findViewById(R.id.loginActivity_lastName_editText);
