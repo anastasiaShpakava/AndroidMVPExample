@@ -52,6 +52,7 @@ public class LoginActivity extends AppCompatActivity implements LoginActivityMVP
         presenter.getCurrentUser();
     }
 
+
     @Override
     public String getFirstName() {
         return firstName.getText().toString();
