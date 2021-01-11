@@ -23,7 +23,6 @@ public class LoginActivity extends AppCompatActivity implements LoginActivityMVP
     private EditText firstName;
     private EditText lastName;
     private Button login;
-
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
