@@ -10,7 +10,6 @@ public class App extends Application {
         super.onCreate();
         component = DaggerAppComponent.create();
     }
-
     public static AppComponent getComponent() {
         return component;
     }
